@@ -6,13 +6,14 @@ Release:		%mkrel 1
 License:		GPL
 Group:			Editors 
 Source0:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch: gedit-plugins-2.18.0-gtksourceview.patch
 URL:			http://gedit.pn.org/
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	pygtk2.0-devel
 BuildRequires:	gnome-python-desktop
 BuildRequires:	libgnomeui2-devel
 BuildRequires:  gedit-devel >= %{req_gedit_version}
-BuildRequires:  gnome-doc-utils libxslt-proc
+BuildRequires:  gnome-doc-utils
 BuildRequires:	gucharmap-devel
 Requires:	gedit >= %{req_gedit_version}
 Requires:	python-vte
@@ -32,6 +33,8 @@ functionality.
 
 %prep
 %setup -q
+%patch -p1
+autoconf
 
 %build
 
@@ -70,5 +73,3 @@ fi
 %{_libdir}/gedit-2/plugins/*.gedit-plugin
 %{_libdir}/gedit-2/plugins/*.py*
 %{_libdir}/gedit-2/plugins/sessionsaver/
-
-
