@@ -2,11 +2,12 @@
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
 Version:		2.19.90
-Release:		%mkrel 1
+Release:		%mkrel 2
 License:		GPL
 Group:			Editors 
 Source0:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-Patch: gedit-plugins-2.18.0-gtksourceview.patch
+# (fc) 2.19.90-2mdv fix build with gedit 2.20 (SVN)
+Patch0: gedit-plugins-2.19.90-gedit220.patch
 URL:			http://gedit.pn.org/
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	pygtk2.0-devel
@@ -33,7 +34,9 @@ functionality.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1 -b .gedit220
+
+#needed by patch 0
 autoconf
 
 %build
