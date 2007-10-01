@@ -14,6 +14,8 @@ BuildRequires:	libgnomeui2-devel
 BuildRequires:  gedit-devel >= %{req_gedit_version}
 BuildRequires:  gnome-doc-utils
 BuildRequires:	gucharmap-devel
+BuildRequires:	python-vte
+BuildRequires:  python-gtksourceview-devel
 Requires:	gedit >= %{req_gedit_version}
 Requires:	python-vte
 
