@@ -7,6 +7,7 @@ License:		GPL
 Group:			Editors 
 Source0:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL:			http://gedit.pn.org/
+BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	pygtk2.0-devel
 BuildRequires:	gnome-python-desktop
 BuildRequires:	libgnomeui2-devel
