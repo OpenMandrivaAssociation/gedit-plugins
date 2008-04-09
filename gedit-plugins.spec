@@ -1,7 +1,7 @@
 %define req_gedit_version 2.20
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
-Version:		2.22.0
+Version:		2.22.1
 Release:		%mkrel 1
 License:		GPL
 Group:			Editors 
