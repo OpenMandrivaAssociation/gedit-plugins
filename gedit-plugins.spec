@@ -16,6 +16,7 @@ BuildRequires:  gnome-doc-utils
 BuildRequires:	gucharmap-devel
 BuildRequires:	python-vte
 BuildRequires:  python-gtksourceview-devel
+BuildRequires:	intltool
 Requires:	gedit >= %{req_gedit_version}
 Requires:	python-vte
 
