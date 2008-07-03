@@ -2,8 +2,8 @@
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
 Version:		2.22.2
-Release:		%mkrel 1
-License:		GPL
+Release:		%mkrel 2
+License:		GPLv2+
 Group:			Editors 
 Source0:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL:			http://gedit.pn.org/
