@@ -11,6 +11,7 @@ BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	pygtk2.0-devel
 BuildRequires:	gnome-python-desktop
 BuildRequires:	libgnomeui2-devel
+BuildRequires:	libglade2.0-devel
 BuildRequires:  gedit-devel >= %{req_gedit_version}
 BuildRequires:  gnome-doc-utils
 BuildRequires:	gucharmap-devel
