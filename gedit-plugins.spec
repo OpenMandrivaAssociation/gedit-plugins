@@ -1,7 +1,7 @@
 %define req_gedit_version 2.20
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
-Version:		2.22.5
+Version:		2.25.1
 Release:		%mkrel 1
 License:		GPLv2+
 Group:			Editors 
@@ -11,7 +11,6 @@ BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	pygtk2.0-devel
 BuildRequires:	gnome-python-desktop
 BuildRequires:	libgnomeui2-devel
-BuildRequires:	libglade2.0-devel
 BuildRequires:  gedit-devel >= %{req_gedit_version}
 BuildRequires:  gnome-doc-utils
 BuildRequires:	gucharmap-devel
@@ -69,8 +68,8 @@ fi
 %defattr(-, root, root)
 %doc COPYING ChangeLog AUTHORS
 %_sysconfdir/gconf/schemas/gedit-show-tabbar-plugin.schemas
-%{_libdir}/gedit-2/plugins/*.glade
 %{_libdir}/gedit-2/plugins/*.so
 %{_libdir}/gedit-2/plugins/*.gedit-plugin
 %{_libdir}/gedit-2/plugins/*.py*
 %{_libdir}/gedit-2/plugins/sessionsaver/
+%{_datadir}/gedit-2/plugins/drawspaces/
