@@ -1,7 +1,7 @@
 %define req_gedit_version 2.20
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
-Version:		2.25.1
+Version:		2.25.2
 Release:		%mkrel 1
 License:		GPLv2+
 Group:			Editors 
@@ -72,4 +72,6 @@ fi
 %{_libdir}/gedit-2/plugins/*.gedit-plugin
 %{_libdir}/gedit-2/plugins/*.py*
 %{_libdir}/gedit-2/plugins/sessionsaver/
+%{_datadir}/gedit-2/plugins/bookmarks
 %{_datadir}/gedit-2/plugins/drawspaces/
+%{_datadir}/gedit-2/plugins/sessionsaver/
