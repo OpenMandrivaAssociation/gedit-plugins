@@ -2,7 +2,7 @@
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
 Version:		2.26.2
-Release:		%mkrel 1
+Release:		%mkrel 2
 License:		GPLv2+
 Group:			Editors 
 Source0:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -15,6 +15,8 @@ BuildRequires:  gedit-devel >= %{req_gedit_version}
 BuildRequires:  gnome-doc-utils
 BuildRequires:	gucharmap-devel
 BuildRequires:	python-vte
+#gw pyvte.pc is in vte-devel
+BuildRequires:	vte-devel
 BuildRequires:  python-gtksourceview-devel
 BuildRequires:	intltool
 Requires:	gedit >= %{req_gedit_version}
