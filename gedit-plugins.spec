@@ -1,7 +1,7 @@
-%define req_gedit_version 2.20
+%define req_gedit_version 2.29.3
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
-Version:		2.28.0
+Version:		2.29.3
 Release:		%mkrel 1
 License:		GPLv2+
 Group:			Editors 
@@ -18,6 +18,7 @@ BuildRequires:	python-vte
 #gw pyvte.pc is in vte-devel
 BuildRequires:	vte-devel
 BuildRequires:  python-gtksourceview-devel
+BuildRequires:  gtksourceview-devel >= 2.9.1
 BuildRequires:	intltool
 Requires:	gedit >= %{req_gedit_version}
 Requires:	python-vte
@@ -58,21 +59,19 @@ rm -rf $RPM_BUILD_ROOT%{_libdir}/gedit-2/plugins/*.la
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/gedit-show-tabbar-plugin.schemas > /dev/null
 
 %preun
-if [ "$1" = "0" ] ; then
- GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source` gconftool-2 --makefile-uninstall-rule %{_sysconfdir}/gconf/schemas/gedit-show-tabbar-plugin.schemas > /dev/null
-fi
+%_preun_uninstall_gconf_schemas gedit-show-tabbar-plugin gedit-drawspaces
 
 %files -f %{gettext_package}.lang
 %defattr(-, root, root)
 %doc COPYING ChangeLog AUTHORS
+%_sysconfdir/gconf/schemas/gedit-drawspaces.schemas
 %_sysconfdir/gconf/schemas/gedit-show-tabbar-plugin.schemas
 %{_libdir}/gedit-2/plugins/*.so
 %{_libdir}/gedit-2/plugins/*.gedit-plugin
 %{_libdir}/gedit-2/plugins/*.py*
+%{_libdir}/gedit-2/plugins/multiedit
 %{_libdir}/gedit-2/plugins/sessionsaver/
 %{_datadir}/gedit-2/plugins/bookmarks
 %{_datadir}/gedit-2/plugins/drawspaces/
