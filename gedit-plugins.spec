@@ -2,7 +2,7 @@
 Summary:		Extra plugins for gedit
 Name:			gedit-plugins
 Version:		2.31.6
-Release:		%mkrel 1
+Release:		%mkrel 2
 License:		GPLv2+
 Group:			Editors 
 Source0:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %preun
-%_preun_uninstall_gconf_schemas gedit-show-tabbar-plugin gedit-drawspaces
+%preun_uninstall_gconf_schemas gedit-show-tabbar-plugin gedit-drawspaces
 
 %files -f %{gettext_package}.lang
 %defattr(-, root, root)
