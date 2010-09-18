@@ -20,8 +20,10 @@ BuildRequires:	vte-devel
 BuildRequires:  python-gtksourceview-devel
 BuildRequires:  gtksourceview-devel >= 2.9.1
 BuildRequires:	intltool
+BuildRequires:	python-dbus
 Requires:	gedit >= %{req_gedit_version}
 Requires:	python-vte
+Requires:	python-dbus
 
 %description
 gEdit is a small but powerful text editor designed expressly
