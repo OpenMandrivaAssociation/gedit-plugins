@@ -48,18 +48,18 @@ functionality.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %makeinstall_std
 
 # remove unpackaged files
-rm -rf $RPM_BUILD_ROOT%{_libdir}/gedit-2/plugins/*.la
+rm -rf %{buildroot}%{_libdir}/gedit-2/plugins/*.la
 
 %define gettext_package %{name}
 %{find_lang} %{gettext_package}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 
 %preun
