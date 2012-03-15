@@ -1,29 +1,21 @@
-%define req_gedit_version 2.29.3
-Summary:		Extra plugins for gedit
-Name:			gedit-plugins
-Version:		2.32.0
-Release:		%mkrel 3
-License:		GPLv2+
-Group:			Editors 
-Source0:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-URL:			http://gedit.pn.org/
-BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:	pygtk2.0-devel
-BuildRequires:	gnome-python-desktop
-BuildRequires:	libgnomeui2-devel
-BuildRequires:  gedit-devel >= %{req_gedit_version}
-BuildRequires:  gnome-doc-utils
-BuildRequires:	gucharmap-devel
-BuildRequires:	python-vte
-#gw pyvte.pc is in vte-devel
-BuildRequires:	vte-devel
-BuildRequires:  python-gtksourceview-devel
-BuildRequires:  gtksourceview-devel >= 2.9.1
+Summary:	Extra plugins for gedit
+Name:		gedit-plugins
+Version:	3.2.1
+Release:	1
+License:	GPLv2+
+Group:		Editors 
+URL:		http://gedit.pn.org/
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
+
 BuildRequires:	intltool
-BuildRequires:	python-dbus
-Requires:	gedit >= %{req_gedit_version}
-Requires:	python-vte
-Requires:	python-dbus
+BuildRequires:	pkgconfig(dbus-python)
+BuildRequires:	pkgconfig(gedit)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gtksourceview-3.0)
+BuildRequires:	pkgconfig(libpeas-gtk-1.0)
+
+Requires:	gedit >= %{version}
 
 %description
 gEdit is a small but powerful text editor designed expressly
@@ -42,43 +34,20 @@ functionality.
 %setup -q
 
 %build
-
-%configure2_5x
+%configure2_5x \
+	--disable-static
 
 %make
 
 %install
-rm -rf %{buildroot}
-
 %makeinstall_std
+find %{buildroot} -name *.la | xargs rm
 
-# remove unpackaged files
-rm -rf %{buildroot}%{_libdir}/gedit-2/plugins/*.la
+%find_lang %{name}
 
-%define gettext_package %{name}
-%{find_lang} %{gettext_package}
-
-%clean
-rm -rf %{buildroot}
-
-
-%preun
-%preun_uninstall_gconf_schemas gedit-show-tabbar-plugin gedit-drawspaces
-
-%files -f %{gettext_package}.lang
-%defattr(-, root, root)
+%files -f %{name}.lang
 %doc COPYING ChangeLog AUTHORS
-%_sysconfdir/gconf/schemas/gedit-drawspaces.schemas
-%_sysconfdir/gconf/schemas/gedit-show-tabbar-plugin.schemas
-%{_libdir}/gedit-2/plugins/*.so
-%{_libdir}/gedit-2/plugins/*.gedit-plugin
-%{_libdir}/gedit-2/plugins/*.py*
-%{_libdir}/gedit-2/plugins/commander/
-%{_libdir}/gedit-2/plugins/multiedit
-%{_libdir}/gedit-2/plugins/sessionsaver/
-%{_libdir}/gedit-2/plugins/synctex
-%{_libdir}/gedit-2/plugins/textsize
-%{_datadir}/gedit-2/plugins/commander/
-%{_datadir}/gedit-2/plugins/bookmarks
-%{_datadir}/gedit-2/plugins/drawspaces/
-%{_datadir}/gedit-2/plugins/sessionsaver/
+%{_datadir}/glib-2.0/schemas/*.xml
+%{_libdir}/gedit/plugins/*
+%{_datadir}/gedit/plugins/*
+
