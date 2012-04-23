@@ -1,6 +1,6 @@
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	3.2.1
+Version:	3.4.0
 Release:	1
 License:	GPLv2+
 Group:		Editors 
