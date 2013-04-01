@@ -1,3 +1,5 @@
+%define _disable_ld_no_undefined 1
+
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
 Version:	3.4.0
