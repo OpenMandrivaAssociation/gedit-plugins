@@ -11,6 +11,7 @@ Url:		http://gedit.pn.org/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gedit-plugins/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
+BuildRequires:	itstool
 BuildRequires:	pkgconfig(dbus-python)
 BuildRequires:	pkgconfig(gedit)
 BuildRequires:	pkgconfig(glib-2.0)
