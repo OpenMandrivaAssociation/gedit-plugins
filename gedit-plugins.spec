@@ -12,6 +12,7 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gedit-plugins/%{url_ver}/%{name}-
 
 BuildRequires:	intltool
 BuildRequires:	itstool
+BuildRequires:  xmllint
 BuildRequires:	pkgconfig(dbus-python)
 BuildRequires:	pkgconfig(gedit)
 BuildRequires:	pkgconfig(glib-2.0)
