@@ -3,8 +3,8 @@
 
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	3.8.3
-Release:	7
+Version:	3.14.0
+Release:	1
 License:	GPLv2+
 Group:		Editors 
 Url:		http://gedit.pn.org/
@@ -36,19 +36,21 @@ functionality.
 %setup -q
 
 %build
-%configure2_5x \
-	--disable-static
+%configure 
 
 %make
 
 %install
 %makeinstall_std
 
+%find_lang gedit --with-gnome
 %find_lang %{name}
 
-%files -f %{name}.lang
+cat %{name}.lang >> gedit.lang
+
+%files -f gedit.lang
 %doc COPYING AUTHORS
 %{_libdir}/gedit/plugins/*
+%{_datadir}/appdata/*
 %{_datadir}/gedit/plugins/*
 %{_datadir}/glib-2.0/schemas/*.xml
-
