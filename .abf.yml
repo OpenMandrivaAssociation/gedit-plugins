@@ -1,5 +1,6 @@
 removed_sources:
   gedit-plugins-3.14.0.tar.xz: 8ef1685440e9a62154439b5bca2b5890f2d4d37e
+  gedit-plugins-3.14.1.tar.xz: c078f4a2b3940e3588e6ec4ab18b30ecc2d2830b
   gedit-plugins-3.8.3.tar.xz: 8330612158fc2ef22b54e6ee172d9b0a3f5b2777
 sources:
-  gedit-plugins-3.14.1.tar.xz: c078f4a2b3940e3588e6ec4ab18b30ecc2d2830b
+  gedit-plugins-3.16.0.tar.xz: 177df1df4822cc57b89357667a4b76640adfc9fd
