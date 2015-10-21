@@ -1,9 +1,10 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 %define _disable_ld_no_undefined 1
+%define _disable_rebuild_configure 1
 
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	3.14.0
+Version:	3.18.0
 Release:	1
 License:	GPLv2+
 Group:		Editors 
