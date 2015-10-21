@@ -9,7 +9,7 @@ Release:	1
 License:	GPLv2+
 Group:		Editors 
 Url:		http://gedit.pn.org/
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gedit-plugins/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.gnome.org:21/pub/GNOME/sources/gedit-plugins/3.14/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
 BuildRequires:	itstool
