@@ -60,4 +60,4 @@ cat %{name}.lang >> gedit.lang
 %{_datadir}/glib-2.0/schemas/*.xml
 %{_libdir}/gedit/plugins/*
 %{_datadir}/gedit/plugins/*
-%{_metainfodir}/gedit-*.metainfo.xml
+%{_datadir}/metainfo/gedit-*.metainfo.xml
