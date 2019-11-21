@@ -4,13 +4,16 @@
 
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	3.30.1
-Release:	2
+Version:	3.34.1
+Release:	1
 License:	GPLv2+
 Group:		Editors 
 Url:		http://gedit.pn.org/
 Source0:	ftp://ftp.gnome.org:21/pub/GNOME/sources/gedit-plugins/3.14/%{name}-%{version}.tar.xz
 
+BuildRequires:  appstream-util
+BuildRequires:  cmake
+BuildRequires:  meson
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:  libxml2-utils
@@ -20,6 +23,8 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libpeas-gtk-1.0)
+BuildRequires:  pkgconfig(zeitgeist-2.0)
+BuildRequires:  pkgconfig(vapigen)
 Requires:	gedit >= %{version}
 
 %description
@@ -39,12 +44,11 @@ functionality.
 %setup -q
 
 %build
-%configure 
-
-%make
+%meson
+%meson_install
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang gedit --with-gnome
 %find_lang %{name}
@@ -52,8 +56,8 @@ functionality.
 cat %{name}.lang >> gedit.lang
 
 %files -f gedit.lang
-%doc COPYING AUTHORS
-%{_libdir}/gedit/plugins/*
-%{_datadir}/appdata/*
-%{_datadir}/gedit/plugins/*
+%doc AUTHORS NEWS README
 %{_datadir}/glib-2.0/schemas/*.xml
+%{_libdir}/gedit/plugins/*
+%{_datadir}/gedit/plugins/*
+%{_metainfodir}/gedit-*.metainfo.xml
