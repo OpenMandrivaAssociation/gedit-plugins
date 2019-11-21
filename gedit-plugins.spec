@@ -4,13 +4,14 @@
 
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	3.30.1
-Release:	2
+Version:	3.34.1
+Release:	1
 License:	GPLv2+
 Group:		Editors 
 Url:		http://gedit.pn.org/
 Source0:	ftp://ftp.gnome.org:21/pub/GNOME/sources/gedit-plugins/3.14/%{name}-%{version}.tar.xz
 
+BuildRequires:  meson
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:  libxml2-utils
@@ -39,12 +40,11 @@ functionality.
 %setup -q
 
 %build
-%configure 
-
-%make
+%meson
+%meson_install
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang gedit --with-gnome
 %find_lang %{name}
