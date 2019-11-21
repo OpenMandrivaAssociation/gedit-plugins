@@ -11,6 +11,8 @@ Group:		Editors
 Url:		http://gedit.pn.org/
 Source0:	ftp://ftp.gnome.org:21/pub/GNOME/sources/gedit-plugins/3.14/%{name}-%{version}.tar.xz
 
+BuildRequires:  appstream-util
+BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:	intltool
 BuildRequires:	itstool
@@ -21,6 +23,7 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libpeas-gtk-1.0)
+BuildRequires:  pkgconfig(zeitgeist-2.0)
 Requires:	gedit >= %{version}
 
 %description
