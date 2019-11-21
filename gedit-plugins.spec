@@ -56,8 +56,8 @@ functionality.
 cat %{name}.lang >> gedit.lang
 
 %files -f gedit.lang
-%doc COPYING AUTHORS
-%{_libdir}/gedit/plugins/*
-%{_datadir}/appdata/*
-%{_datadir}/gedit/plugins/*
+%doc AUTHORS NEWS README
 %{_datadir}/glib-2.0/schemas/*.xml
+%{_libdir}/gedit/plugins/*
+%{_datadir}/gedit/plugins/*
+%{_metainfodir}/gedit-*.metainfo.xml
