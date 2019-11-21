@@ -24,6 +24,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libpeas-gtk-1.0)
 BuildRequires:  pkgconfig(zeitgeist-2.0)
+BuildRequires:  pkgconfig(vapigen)
 Requires:	gedit >= %{version}
 
 %description
