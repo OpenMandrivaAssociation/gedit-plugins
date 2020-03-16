@@ -25,7 +25,7 @@ BuildRequires:	pkgconfig(gtksourceview-3.0)
 BuildRequires:	pkgconfig(libpeas-gtk-1.0)
 BuildRequires:  pkgconfig(zeitgeist-2.0)
 BuildRequires:  pkgconfig(vapigen)
-Requires:	gedit >= %{version}
+Requires:	gedit
 
 %description
 gEdit is a small but powerful text editor designed expressly
