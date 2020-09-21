@@ -4,7 +4,7 @@
 
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	3.36.2
+Version:	3.38.0
 Release:	1
 License:	GPLv2+
 Group:		Editors 
@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig(dbus-python)
 BuildRequires:	pkgconfig(gedit)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:	pkgconfig(gtksourceview-3.0)
+BuildRequires:	pkgconfig(gtksourceview-4)
 BuildRequires:	pkgconfig(libpeas-gtk-1.0)
 BuildRequires:  pkgconfig(zeitgeist-2.0)
 BuildRequires:  pkgconfig(vapigen)
