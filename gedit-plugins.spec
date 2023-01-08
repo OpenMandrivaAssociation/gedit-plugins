@@ -56,7 +56,7 @@ functionality.
 cat %{name}.lang >> gedit.lang
 
 %files -f gedit.lang
-%doc AUTHORS NEWS README.md
+%doc NEWS README.md
 %{_datadir}/glib-2.0/schemas/*.xml
 %{_libdir}/gedit/plugins/*
 %{_datadir}/gedit/plugins/*
