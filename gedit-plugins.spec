@@ -4,12 +4,12 @@
 
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	46.0
+Version:	47.1
 Release:	1
 License:	GPLv2+
 Group:		Editors 
 Url:		https://gedit.pn.org/
-Source0:	https://ftp.gnome.org:21/pub/GNOME/sources/gedit-plugins/46/%{name}-%{version}.tar.gz
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/gedit-plugins/46/%{name}-%{version}.tar.gz
 
 BuildRequires:  appstream-util
 BuildRequires:  cmake
