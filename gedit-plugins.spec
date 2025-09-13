@@ -60,5 +60,4 @@ cat %{name}.lang >> gedit.lang
 %doc NEWS README.md
 %{_datadir}/glib-2.0/schemas/*.xml
 %{_libdir}/gedit/plugins/*
-%{_datadir}/gedit/plugins/*
 %{_datadir}/metainfo/gedit-*.metainfo.xml
