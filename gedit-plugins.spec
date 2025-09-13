@@ -9,7 +9,8 @@ Release:	1
 License:	GPLv2+
 Group:		Editors 
 Url:		https://gedit.pn.org/
-Source0:	https://ftp.gnome.org/pub/GNOME/sources/gedit-plugins/47/%{name}-%{version}.tar.xz
+#Source0:	https://ftp.gnome.org/pub/GNOME/sources/gedit-plugins/47/%{name}-%{version}.tar.xz
+Source0:  https://gitlab.gnome.org/World/gedit/gedit-plugins/-/archive/%{version}/gedit-plugins-%{version}.tar.bz2
 
 BuildRequires:  appstream-util
 BuildRequires:  cmake
