@@ -4,7 +4,7 @@
 
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
-Version:	49.alpha1
+Version:	50.0
 Release:	1
 License:	GPLv2+
 Group:		Editors 
@@ -17,7 +17,7 @@ BuildRequires:  cmake
 BuildRequires:  meson
 BuildRequires:	intltool
 BuildRequires:	itstool
-BuildRequires:  libxml2-utils
+BuildRequires:  libxml2-utils >= 2.15.2
 BuildRequires:	pkgconfig(dbus-python)
 BuildRequires:	pkgconfig(gedit)
 BuildRequires:	pkgconfig(glib-2.0)
