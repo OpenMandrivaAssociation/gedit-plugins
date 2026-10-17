@@ -5,7 +5,7 @@
 Summary:	Extra plugins for gedit
 Name:		gedit-plugins
 Version:	50.0
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Editors 
 Url:		https://gedit.pn.org/
